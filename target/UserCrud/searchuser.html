@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Search</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300' rel='stylesheet' type='text/css'>
+    <style>
+       * {
+    box-sizing: border-box;
+}
+
+ body {  background-color: #2ecc71;font-family: source-sans-pro, sans-serif;font-weight: 300;line-height: 1.42em;
+  color:#A7A1AE;}
+
+
+        ul {text-align:center;}
+
+        li{display:inline-block;padding:margin-left:5px;margin-right:15px;font-weight:bold;padding-right:20px;}
+
+
+        h1 {
+  font-size:3em;
+  font-weight: 300;
+  line-height:1em;
+  text-align: center;
+  color: #ffffff;
+}
+
+h2 {
+  font-size:1em;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height:1em;
+  padding-bottom: 2em;
+  color: #FB667A;
+}
+
+h2 a {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FB667A;
+  text-decoration: none;
+}
+
+
+#containerr {
+    width: 800px;
+    margin: 0 auto;
+}
+
+
+
+
+
+@-webkit-keyframes bugfix {
+    from {
+        padding: 0
+    }
+
+    to {
+        padding: 0
+    }
+}
+
+.checkbox-btn,
+.radio-btnmine {
+    position: relative;
+    padding-left: 20px
+}
+
+.checkbox-btn input[type="checkbox"],
+.checkbox-btn input[type="radio"],
+.radio-btnmine input[type="checkbox"],
+.radio-btnmine input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    z-index: 1
+}
+
+.checkbox-btn label,
+.radio-btnmine label {
+    display: inline-block;
+    line-height: 24px;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    user-select: none;
+    color: #424242
+}
+
+.checkbox-btn label::after,
+.radio-btnmine label::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    margin-left: -16px;
+    margin-top:2px;
+    background-color: white;
+    border: 3px solid #424242;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-clip: padding-box;
+    cursor: pointer
+}
+
+.checkbox-btn label::before,
+.radio-btnmine label::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 5px;
+    top: 6px;
+    left: 6px;
+    margin-left: -18px;
+    border: 3px solid #000;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    z-index: 1
+}
+
+.checkbox-btn label:active::before,
+.radio-btnmine label:active::before {
+    opacity: 0.3
+}
+
+.checkbox-btn input[type="checkbox"]:checked+label,
+.checkbox-btn input[type="radio"]:checked+label,
+.radio-btnmine input[type="checkbox"]:checked+label,
+.radio-btnmine input[type="radio"]:checked+label {
+    color: #000
+}
+
+.checkbox-btn input[type="checkbox"]:checked+label::after,
+.checkbox-btn input[type="radio"]:checked+label::after,
+.radio-btnmine input[type="checkbox"]:checked+label::after,
+.radio-btnmine input[type="radio"]:checked+label::after {
+    border: 3px solid #000
+}
+
+.checkbox-btn input[type="checkbox"]:checked+label::before,
+.checkbox-btn input[type="radio"]:checked+label::before,
+.radio-btnmine input[type="checkbox"]:checked+label::before,
+.radio-btnmine input[type="radio"]:checked+label::before {
+    opacity: 1
+}
+
+.checkbox-btn input[type="checkbox"]:disabled+label,
+.checkbox-btn input[type="radio"]:disabled+label,
+.radio-btnmine input[type="checkbox"]:disabled+label,
+.radio-btnmine input[type="radio"]:disabled+label {
+    color: #787878;
+    cursor: default
+}
+
+.checkbox-btn input[type="checkbox"]:disabled+label::after,
+.checkbox-btn input[type="radio"]:disabled+label::after,
+.radio-btnmine input[type="checkbox"]:disabled+label::after,
+.radio-btnmine input[type="radio"]:disabled+label::after {
+    border: 3px solid #787878;
+    background-color: #ffffff
+}
+
+.checkbox-btn input[type="checkbox"]:disabled+label::before,
+.checkbox-btn input[type="radio"]:disabled+label::before,
+.radio-btnmine input[type="checkbox"]:disabled+label::before,
+.radio-btnmine input[type="radio"]:disabled+label::before {
+    display: none
+}
+
+.radio-btnmine label::after {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-clip: padding-box
+}
+
+.radio-btnmine label::before {
+    width: 12px;
+    height: 12px;
+    border: none;
+    top: 6px;
+    left: 6px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-clip: padding-box;
+    background-color: #000000;
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+}
+
+/*# sourceMappingURL=checkbox.css.map */
+
+#submitButton {margin-top:20px;position:absolute;padding:5 10 5 10;font-size:15px;font-weight:bold;left:47%;color:black;}
+
+   </style>
+</head>
+
+<body>
+
+<div id="fullnav">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">User Database 1.0</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="home.html" style="text-decoration:none">Home</a></li>
+                <li><a href="form.html" style="text-decoration:none">Register User</a></li>
+                <li><a href="UsersPanelServlet" style="text-decoration:none">Users Panel</a></li>
+                <li><a href="searchuser.html" style="text-decoration:none">Search User</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
+<br>
+<div id="containerr">
+    <h1>Please select the search method</h1>
+    <form method="POST" action="SearchServlet">
+        <ul>
+            <li>
+                <div class="radio-btnmine">
+                    <input type="radio" value="ById" id="rc1" name="searchType" checked="checked" />
+                    <label for="rc1" onclick>By Id</label>
+                </div>
+            </li>
+            <li>
+                <div class="radio-btnmine">
+                    <input type="radio" value="ByEmail" id="rc2" name="searchType" />
+                    <label for="rc2" onclick>By Email</label>
+                </div>
+            </li>
+            <li>
+                <input id="submitButton" type="SUBMIT">
+            </li>
+        </ul>
+    </form>
+</div>
+</body>
+
+</html>

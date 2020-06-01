@@ -1,0 +1,56 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
+<%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
+<html>
+<head>
+    <title>User Panel</title>
+    <style>
+  body{background-color:gold; font-family:"Arial";}
+
+         h1{font-size:30px;}
+
+         ul {text-align:center;}
+
+         li{display:inline-block;padding:margin-left:5px;margin-right:15px;font-weight:bold;padding-right:20px;}
+
+         section {text-align:center;}
+
+         .title {font-size:18 px;
+                 font-weight:bolder;}
+
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li class="selected"><a href="home.html" style="text-decoration:none">HOME</a></li>
+        <li><a href="form.html" style="text-decoration:none">REGISTER USER</a></li>
+        <li><a href="UsersPanelServlet" style="text-decoration:none">USERS PANEL</a></li>
+        <li><a href="searchuser.html" style="text-decoration:none">SEARCH USER</a></li>
+    </ul>
+</nav>
+
+<div id = "container">
+
+    <table align="center" border="2">
+        <tr>
+            <td class ="title">First Name</td>
+            <td class = "title">Last Name</td>
+            <td class = "title">Email</td>
+            <td class = "title">Age</td>
+            <td class = "title">Gender</td>
+        </tr>
+        <c:forEach items="${users}" var="user">
+            <tr>
+                <td>${user.firstName}</td>
+                <td>${user.lastName}</td>
+                <td>${user.eMail}</td>
+                <td>${user.age}</td>
+                <td>${user.gender} </td>
+            </tr>
+        </c:forEach>
+</div>
+</table>
+</body>
+</html>

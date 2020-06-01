@@ -1,0 +1,140 @@
+<html>
+<head>
+    <title>Home Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+          body {
+  background-color: #2ecc71;
+  font-family: source-sans-pro, sans-serif;
+}
+
+        ul {text-align:center;}
+
+        li{display:inline-block;padding:margin-left:5px;margin-right:15px;font-weight:bold;padding-right:20px;}
+
+        #container{text-align:center;}
+
+        p{font-size:20px;}
+
+      h1 {
+  margin-left: auto;
+  text-align: left;
+  font-weight: 100;
+  font-size: 2.7em;
+  color: #ffffff;
+}
+
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
+
+@keyframes slidefromleft {
+0% {
+    transform: translateX(-100%);
+  }
+   100% {
+    transform: translateX(0);
+  }
+  }
+
+
+#fullnav {
+ animation: slidefromleft 2s;
+}
+
+#imgone {
+animation: fadein 4s;
+}
+#imgtwo {
+animation: fadein 7s;
+}
+#imgthree {
+animation: fadein 2s;
+}
+#imgfour {
+animation: fadein 8s;
+}
+#imgfive {
+animation: fadein 5s;
+}
+#imgsix {
+animation: fadein 1s;
+}
+#imgseven {
+animation: fadein 4s;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<div id="fullnav">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">User Database 1.0</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="home.html" style="text-decoration:none">Home</a></li>
+                <li><a href="form.html" style="text-decoration:none">Register User</a></li>
+                <li><a href="UsersPanelServlet" style="text-decoration:none">Users Panel</a></li>
+                <li><a href="searchuser.html" style="text-decoration:none">Search User</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
+<br>
+<div class="container">
+
+    <div id="one" class="row">
+        <div class="col-sm-6"><h1><b>Welcome to User Database 1.0</b></h1></div>
+        <div class="col-sm-6"><img id="imgone" src="images/man1.png"
+                                   style="border-radius:125px;width:125px;height:125px;"></div>
+    </div>
+    <div id="two" class="row">
+        <div class="col-sm-8"><p>Here you can add, view and delete users from our database. </p></div>
+        <div class="col-sm-4"><img id="imgtwo" src="images/woman1.png"
+                                   style="border-radius:125px;width:125px;height:125px;"></div>
+
+    </div>
+    <div id="three" class="row">
+        <div class="col-sm-6"><p>Make sure you add an user, if you use the database for the first time!</p></div>
+        <div class="col-sm-2"><img id="imgthree " src="images/man2.png"
+                                   style="border-radius:125px;width:125px;height:125px;"></div>
+
+    </div>
+    <div id="four" class="row">
+        <div class="col-sm-2"><img id="imgfour" src="images/woman4.png"
+                                   style="border-radius:125px;width:125px;height:125px;"></div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2"><img id="imgfive" src="images/woman2.png"
+                                   style="border-radius:125px;width:125px;height:125px;"></div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2"><img id="imgsix" src="images/man3.png"
+                                   style="border-radius:125px;width:125px;height:125px;"></div>
+    </div>
+    <div id="five" class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2"><img id="imgseven" src="images/woman3.png"
+                                   style="border-radius:125px;width:125px;height:125px;"></div>
+    </div>
+
+
+</div>
+
+</body>
+
+
+</html>

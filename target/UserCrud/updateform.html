@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>User Register</title>
+    <style>
+
+        body{background-color:gold; font-family:"Arial";}
+
+        ul {text-align:center;}
+
+        li{display:inline-block;padding:margin-left:5px;margin-right:15px;font-weight:bold;padding-right:20px;}
+
+        form  { display: table;      }
+
+        p     { display: table-row;  }
+
+        label { display: table-cell;padding-top:10px;padding-right:10px;font-weight:bold; }
+
+        input { display: table-cell;border-radius:5px;}
+
+        #register h2{text-align:center;}
+
+        /* This is to align form to center */
+        #register { display: flex;flex-direction: column;justify-content: center;align-items: center;}
+
+        #submitButton {margin-top:20px;position:absolute;padding:5 10 5 10;font-size:15px;font-weight:bold;left:50%;}
+
+
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li class="selected"><a href="home.html" style="text-decoration:none">HOME</a></li>
+        <li><a href="form.html" style="text-decoration:none">REGISTER USER</a></li>
+        <li><a href="UsersPanelServlet" style="text-decoration:none">USERS PANEL</a></li>
+        <li><a href="searchuser.html" style="text-decoration:none">SEARCH USER</a></li>
+    </ul>
+</nav>
+<section id="register">
+    <h2>Register Form</h2>
+    <div id="formular">
+        <form method="POST" action="RegisterServlet">
+            <p>
+                <label for="firstName">First Name:</label>
+                <input id="firstName" type="text" name="firstName" required><br>
+            </p>
+            <p>
+                <label for="LastName">Last Name:</label>
+                <input id="lastName" type="text" name="lastName" required><br>
+            </p>
+            <p>
+                <label for="eMail">E-mail:</label>
+                <input id="eMail" type="text" name="eMail" required><br>
+            </p>
+            <p>
+                <label for="age">Age:</label>
+                <input id="age" type="text" name="age"><br>
+            </p>
+            <p id="submit">
+                <label for="gender">Gender:</label>
+                <input id="gender" type="text" name="gender"><br>
+
+            </p>
+            <p>
+                <input id="submitButton" type="SUBMIT">
+            </p>
+
+        </form>
+    </div>
+
+</section>
+
+</body>
+</html>

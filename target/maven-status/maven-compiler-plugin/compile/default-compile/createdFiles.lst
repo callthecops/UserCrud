@@ -1,0 +1,10 @@
+com\example\web\UsersPanelServlet.class
+com\example\web\RegisterServlet.class
+com\example\web\UpdateDeleteServlet.class
+com\example\web\ResultServlet.class
+com\example\web\AfterUpdateDeleteServlet.class
+com\example\Utils\DatabaseConnection.class
+com\example\Utils\Query.class
+com\example\web\SearchServlet.class
+com\example\model\User.class
+com\example\Utils\Utils.class
